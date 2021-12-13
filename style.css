@@ -1,0 +1,156 @@
+:root {
+  --color-brand--1: #e91e63;
+  --color-brand--2: #43768a;
+
+  --color-light--1: #fff;
+  --color-light--2: #f3f3f3;
+  --color-light--3: #e5e5e5;
+  --color-dark--1: black;
+
+  --color-hover--1: #888;
+  --color-hover--2: #fdfbfb;
+  --color-hover--3: #cddbe6;
+  --color-hover--4: #fafafa;
+
+  --color-blue--1: #3b5998;
+  --color-blue--2: #38a1f3;
+  --color-green--1: #899b37;
+  --color-red--1: #cd486b;
+
+  --color-text--1: #ff3b3d;
+  --color-text--2: #4c4c4c;
+  --color-text--3: #5c5c5c;
+  --color-text--4: #808080;
+  --color-text--5: #333333;
+}
+
+/* GLOBAL */
+
+* {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Quicksand', sans-serif;
+  color: var(--color-text--5);
+  background-color: var(--color-light--1);
+  line-height: 1.6;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+a,
+a:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* HEADER */
+
+.header__icons {
+  margin: 10px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.header__icons i {
+  font-size: 2em;
+  margin: 0 5px;
+}
+
+.header__icons i:hover {
+  color: black;
+}
+
+.header__icons i.fa-facebook-square {
+  color: var(--color-blue--1);
+}
+
+.header__icons i.fa-twitter-square {
+  color: var(--color-blue--2);
+}
+
+.header__icons i.fa-instagram {
+  color: var(--color-red--1);
+}
+
+.header-mobile .header__nav {
+  background-color: #43768a;
+  color: var(--color-light--1);
+  padding: 15px 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-mobile .header__nav a {
+  color: var(--color-light--1);
+}
+
+.header-mobile .header__btn {
+  border: 1px solid var(--color-light--1);
+  border-radius: 4px;
+  font-weight: 600;
+  display: inline-block;
+  height: 28px;
+}
+
+.header-mobile .header__nav-right .header__btn {
+  padding: 2px 5px;
+}
+
+.header-mobile .header__nav-left .header__btn {
+  padding: 1px 6px;
+  line-height: 26px;
+}
+
+.header-mobile .header__btn.menu {
+  margin-left: 10px;
+}
+
+.header-mobile .header__menu .dropdown__item {
+  color: var(--color-dark-1);
+  font-weight: 600;
+  border-bottom: 1px solid var(--color-light--3);
+}
+
+.header-mobile .header__menu .dropdown__menu {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+}
+
+.header-mobile .header__menu .dropdown__name {
+  line-height: 22px;
+}
+
+.header-mobile .header__menu .dropdown__description.no-sub {
+  color: var(--color-brand--2);
+}
+
+.header-mobile .header__menu .dropdown__action {
+  position: relative;
+  font-size: 20px;
+  line-height: 22px;
+}
+
+.header-mobile .header__menu .dropdown__action p {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.header-mobile .header__menu .dropdown__action .expand,
+.header-mobile .header__menu .dropdown__action .close {
+  display: block;
+}
+
+.header-mobile .header__menu .dropdown__action .expand.active,
+.header-mobile .header__menu .dropdown__action .close.active {
+  display: none;
+}
