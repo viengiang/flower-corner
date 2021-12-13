@@ -1,79 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flower Corner</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script type="module" defer src="./controller.js"></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Flower Corner</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-    integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
-    rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
-  <script type="module" defer src="./controller.js"></script>
-</head>
-
-<body>
-  <header>
-    <div class="header header-mobile">
-      <div class="header__icons">
-        <a href="https://www.facebook.com/flowercorner.vn/">
-          <i class="fab fa-facebook-square"></i>
-        </a>
-        <a href="https://twitter.com/FlowerCorner2">
-          <i class="fab fa-twitter-square"></i>
-        </a>
-        <a href="https://www.instagram.com/flowercorner.vn/">
-          <i class="fab fa-instagram"></i>
-        </a>
-      </div>
-      <nav class="header__nav">
-        <div class="header__nav-wrapper">
-          <div class="header__nav-right">
-            <a class="header__btn home" href="/">
-              <i class="fa fa-home"></i> HOME
-            </a>
-            <div class="header__btn menu">
-              <i class="fa fa-bars"></i> MENU
+  <body>
+    <header>
+      <div class="header header-mobile">
+        <div class="header__icons">
+          <a href="https://www.facebook.com/flowercorner.vn/">
+            <i class="fab fa-facebook-square"></i>
+          </a>
+          <a href="https://twitter.com/FlowerCorner2">
+            <i class="fab fa-twitter-square"></i>
+          </a>
+          <a href="https://www.instagram.com/flowercorner.vn/">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </div>
+        <nav class="header__nav">
+          <div class="header__nav-wrapper">
+            <div class="header__nav-right">
+              <a class="header__btn home" href="/">
+                <i class="fa fa-home"></i> HOME
+              </a>
+              <div class="header__btn menu">
+                <i class="fa fa-bars"></i> MENU
+              </div>
+            </div>
+            <div class="header__nav-left">
+              <a class="header__btn user" href="/">
+                <i class="fa fa-user"></i>
+              </a>
+              <a class="header__btn cart" href="/">
+                <i class="fa fa-shopping-cart"></i>
+              </a>
+              <a class="header__btn search" href="/">
+                <i class="fa fa-search"></i>
+              </a>
             </div>
           </div>
-          <div class="header__nav-left">
-            <a class="header__btn user" href="/">
-              <i class="fa fa-user"></i>
-            </a>
-            <a class="header__btn cart" href="/">
-              <i class="fa fa-shopping-cart"></i>
-            </a>
-            <a class="header__btn search" href="/">
-              <i class="fa fa-search"></i>
-            </a>
+          <ul class="header__menu dropdown"></ul>
+        </nav>
+      </div>
+      <div class="header header-desktop">
+        <div class="header__icons">
+          <a href="https://www.facebook.com/flowercorner.vn/">
+            <i class="fab fa-facebook-square"></i>
+          </a>
+          <a href="https://twitter.com/FlowerCorner2">
+            <i class="fab fa-twitter-square"></i>
+          </a>
+          <a href="https://www.instagram.com/flowercorner.vn/">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </div>
+        <div class="header__logo">
+          <a href="/">
+            <img
+              src="./img/shop-hoa-tuoi-flower-corner.png"
+              alt="Flower Corner logo"
+            />
+          </a>
+        </div>
+        <div class="header__user">
+          <div class="header__user-top">
+            <div class="header__account">
+              <i class="fa fa-user"></i> Tài khoản
+            </div>
+            <div class="header__cart cart">
+              <span class="cart__amount">0</span>
+              <a href="/" class="cart__icon">
+                <i class="fa fa-shopping-bag"></i>
+              </a>
+            </div>
+          </div>
+          <div class="header__user-bot">
+            <input type="search" class="header__search" placeholder="Search ..."></input>
           </div>
         </div>
-        <ul class="header__menu dropdown">
-          <!-- <li class="dropdown__item" data-name="">
-              <div class="dropdown__menu" >
-                <a class="dropdown__description" href="/">HOA SINH NHẬT</a>
-                <div class="dropdown__action action">
-                  <p class="action__icon expand">+</p>
-                  <p class="action__icon close active">-</p>
-                </div>
-              </div>
-              <ul class="dropdown__submenu submenu">
-                <li class="submenu__item">
-                  <a class="submenu__name" href="/">HOA SINH NHẬT SANG TRỌNG</a>
-                </li>
-              </ul>
-            </li> -->
-        </ul>
-      </nav>
-    </div>
-    <div class="header header-desktop"></div>
-  </header>
-  <section style="height: 1000px;"></section>
-</body>
-
+      </div>
+    </header>
+    <section style="height: 1000px"></section>
+  </body>
 </html>
