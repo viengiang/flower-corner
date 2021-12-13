@@ -3,7 +3,9 @@ import navView from './views/navView.js';
 
 const init = function () {
   navView.render(model.state.menu);
-  navView.addHandlerClick();
+  navView.addHandlerClickMenu();
+  navView.addHandlerClickExpand();
+  navView.addHandlerScroll();
 };
 
 init();
