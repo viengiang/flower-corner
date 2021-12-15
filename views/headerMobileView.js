@@ -1,4 +1,4 @@
-class NavView {
+class HeaderMobileView {
   _parentEl = document.querySelector('.header-mobile');
   _menuEl = this._parentEl.querySelector('.header__menu');
   _data;
@@ -17,7 +17,7 @@ class NavView {
         `;
   }
 
-  _generateSubmenu(menu) {
+  _generateSubmenuMarkup(menu) {
     return menu.submenu
       .map(
         sub => `
@@ -38,7 +38,7 @@ class NavView {
           ${this._generateMenu(menu)}
         </div>
         <ul class="dropdown__submenu submenu">
-          ${this._generateSubmenu(menu)}
+          ${this._generateSubmenuMarkup(menu)}
         </ul>
       </li>
       `
@@ -51,7 +51,7 @@ class NavView {
     this._menuEl.insertAdjacentHTML('afterbegin', this._generateMarkup());
   }
 
-  addHandlerClickExpand() {
+  _addHandlerClickExpand() {
     this._menuEl.addEventListener('click', e => {
       const target = e.target;
       if (!target.classList.contains('action__icon')) return;
@@ -89,7 +89,7 @@ class NavView {
     });
   }
 
-  addHandlerClickMenu() {
+  _addHandlerClickMenu() {
     this._parentEl
       .querySelector('.header__btn.menu')
       .addEventListener('click', e => {
@@ -99,7 +99,8 @@ class NavView {
       });
   }
 
-  addHandlerScroll() {
+  _addHandlerScroll() {
+    const navEl = this._parentEl.querySelector('.header__nav');
     const options = {
       root: null,
       rootMargin: '0px',
@@ -108,12 +109,12 @@ class NavView {
     const handlerScroll = function (entries) {
       entries.forEach(entry => {
         if (!entry.isIntersecting) {
-          this._parentEl.querySelector('.header__nav').style.position = 'fixed';
-          this._parentEl.querySelector('.header__nav').style.top = 0;
+          navEl.style.position = 'fixed';
+          navEl.style.top = 0;
         }
         if (entry.isIntersecting) {
-          this._parentEl.querySelector('.header__nav').style.position = 'unset';
-          this._parentEl.querySelector('.header__nav').style.top = 'unset';
+          navEl.style.position = 'unset';
+          navEl.style.top = 'unset';
         }
       });
     };
@@ -125,6 +126,12 @@ class NavView {
 
     observer.observe(this._parentEl.querySelector('.header__icons'));
   }
+
+  addHanlerEvent() {
+    this._addHandlerClickMenu();
+    this._addHandlerClickExpand();
+    this._addHandlerScroll();
+  }
 }
 
-export default new NavView();
+export default new HeaderMobileView();

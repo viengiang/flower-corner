@@ -1,11 +1,12 @@
 import * as model from './model.js';
-import navView from './views/navView.js';
+import headerMobileView from './views/headerMobileView.js';
+import headerDesktopView from './views/headerDesktopView.js';
 
 const init = function () {
-  navView.render(model.state.menu);
-  navView.addHandlerClickMenu();
-  navView.addHandlerClickExpand();
-  navView.addHandlerScroll();
+  headerMobileView.render(model.state.menu);
+  headerMobileView.addHanlerEvent();
+
+  headerDesktopView.render(model.state.menu);
 };
 
 init();
