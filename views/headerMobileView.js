@@ -1,7 +1,7 @@
-class HeaderMobileView {
+import View from './View.js';
+class HeaderMobileView extends View {
   _parentEl = document.querySelector('.header-mobile');
   _menuEl = this._parentEl.querySelector('.header__menu');
-  _data;
 
   _generateMenu(menu) {
     return menu.submenu.length === 0
@@ -99,38 +99,10 @@ class HeaderMobileView {
       });
   }
 
-  _addHandlerScroll() {
-    const navEl = this._parentEl.querySelector('.header__nav');
-    const options = {
-      root: null,
-      rootMargin: '0px',
-      threshold: 0.0,
-    };
-    const handlerScroll = function (entries) {
-      entries.forEach(entry => {
-        if (!entry.isIntersecting) {
-          navEl.style.position = 'fixed';
-          navEl.style.top = 0;
-        }
-        if (entry.isIntersecting) {
-          navEl.style.position = 'unset';
-          navEl.style.top = 'unset';
-        }
-      });
-    };
-
-    const observer = new IntersectionObserver(
-      handlerScroll.bind(this),
-      options
-    );
-
-    observer.observe(this._parentEl.querySelector('.header__icons'));
-  }
-
-  addHanlerEvent() {
+  addHandlerEvent() {
     this._addHandlerClickMenu();
     this._addHandlerClickExpand();
-    this._addHandlerScroll();
+    this._addHandlerScroll(this._parentEl.querySelector('.header__icons'));
   }
 }
 

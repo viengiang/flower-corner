@@ -1,6 +1,6 @@
-class HeaderDesktopView {
-  _parentEl = document.querySelector('.header-desktop .nav__list');
-  _data;
+import View from './View.js';
+class HeaderDesktopView extends View {
+  _parentEl = document.querySelector('.header-desktop');
 
   _generateSubmenuMarkup(menu) {
     return menu.submenu
@@ -33,7 +33,13 @@ class HeaderDesktopView {
 
   render(data) {
     this._data = data;
-    this._parentEl.insertAdjacentHTML('afterbegin', this._generateMarkup());
+    this._parentEl
+      .querySelector('.nav__list')
+      .insertAdjacentHTML('afterbegin', this._generateMarkup());
+  }
+
+  addHandlerEvent() {
+    this._addHandlerScroll(this._parentEl.querySelector('.header__top'));
   }
 }
 

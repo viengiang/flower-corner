@@ -94,4 +94,9 @@ export const state = {
       submenu: [],
     },
   ],
+  swiperImages: [
+    './img/sliders/slider1.jpg',
+    './img/sliders/slider2.jpg',
+    './img/sliders/slider3.jpg',
+  ],
 };
