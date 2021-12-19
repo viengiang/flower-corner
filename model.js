@@ -94,9 +94,73 @@ export const state = {
       submenu: [],
     },
   ],
-  swiperImages: [
-    './img/sliders/slider1.jpg',
-    './img/sliders/slider2.jpg',
-    './img/sliders/slider3.jpg',
+  topics: [
+    {
+      img: './img/topics/hoa-tinh-yeu.webp',
+      name: 'HOA TÌNH YÊU',
+    },
+    {
+      img: './img/topics/hoa-sinh-nhat.webp',
+      name: 'HOA SINH NHẬT',
+    },
+    {
+      img: './img/topics/hoa-cuoi.webp',
+      name: 'HOA CƯỚI',
+    },
+    {
+      img: './img/topics/hoa-lan.webp',
+      name: 'HOA LAN',
+    },
+    {
+      img: './img/topics/hoa-khai-truong.webp',
+      name: 'HOA KHAI TRƯƠNG',
+    },
+    {
+      img: './img/topics/hoa-chia-buon.webp',
+      name: 'HOA CHIA BUỒN',
+    },
   ],
+  products: {
+    sales: {
+      title: 'ĐANG GIẢM GIÁ',
+      items: [
+        {
+          img: './img/products/sales/sales1.jpg',
+          name: 'Bó Hoa Sắc Màu',
+          isSale: true,
+          saleRate: '16%',
+          price: 200000,
+          salePrice: 170000,
+          rate: 0,
+        },
+        {
+          img: './img/products/sales/sales2.jpg',
+          name: 'Màu Nắng Ấm',
+          isSale: true,
+          saleRate: '13%',
+          price: 330000,
+          salePrice: 290000,
+          rate: 0,
+        },
+        {
+          img: './img/products/sales/sales3.jpg',
+          name: 'Trái Tim Nhỏ',
+          isSale: true,
+          saleRate: '21%',
+          price: 490000,
+          salePrice: 390000,
+          rate: 0,
+        },
+        {
+          img: './img/products/sales/sales4.jpg',
+          name: 'Giỏ Hoa Thạch Thảo Yêu Kiều',
+          isSale: true,
+          saleRate: '17%',
+          price: 590000,
+          salePrice: 490000,
+          rate: 5,
+        },
+      ],
+    },
+  },
 };

@@ -1,7 +1,8 @@
 import * as model from './model.js';
 import headerMobileView from './views/headerMobileView.js';
 import headerDesktopView from './views/headerDesktopView.js';
-import sliderView from './views/sliderView.js';
+import topicsView from './views/topicsView.js';
+import productsView from './views/productsView.js';
 
 const controlHeader = function () {
   headerMobileView.render(model.state.menu);
@@ -13,7 +14,8 @@ const controlHeader = function () {
 
 const init = function () {
   controlHeader();
-  sliderView.render(model.state.swiperImages);
+  topicsView.render(model.state.topics);
+  productsView.render(model.state.products.sales);
 };
 
 init();
