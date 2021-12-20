@@ -113,7 +113,7 @@
   </header>
   <section class="slider container">
     <p class="slider__contact">ĐẶT HOA NHANH - GỌI NGAY 1900 633 045 - 0865 160 360 hoặc 0918 491 941</p>
-    <div class="slider__content swiper mySwiper">
+    <div class="slider__content swiper">
       <div class="slider__wrapper swiper-wrapper">
         <div class="slider__slide swiper-slide">
           <img class="slider__image swiper-image" src="./img/sliders/slider1.jpg" alt="Slider image 1"></img>
@@ -130,15 +130,133 @@
     </div>
   </section>
   <section class="topics container">
-    <ul class="topics__content"></ul>
+    <ul class="topics__content">
+      <!-- <li class="topics_item topic">
+        <a class="topic__img" href="/">
+          <img src="" alt="">
+        </a>
+        <a class="topic__description" href="/"></a>
+      </li> -->
+    </ul>
   </section>
   <section class="sales products container">
+    <!-- <div class="products__title"></div>
+    <div class="products__content">
+      <div class="products__item product">
+        <a class="product__top">
+          <div class="product__img">
+            <img src="" alt="">
+          </div>
+          <div class="product__discount"> GIẢM</div>
+        </a>
+        <div class="product__bot">
+          <div class="product__name"></div>
+          <div class="product__rate rate">
+            <i class="fa fa-star rate__star"></i>
+            <i class="fa fa-star rate__star"></i>
+            <i class="fa fa-star rate__star"></i>
+            <i class="fa fa-star rate__star"></i>
+            <i class="fa fa-star rate__star"></i>
+          </div>
+          <div class="product__price">
+            <span class="product__normal-price isSale"></span>
+            <span class="product__sale-price"></span>
+          </div>
+          <div class="product__action">
+            <a class="product__btn" href="/">ĐẶT HÀNG</a>
+          </div>
+        </div>
+      </div>
+    </div> -->
+  </section>
+  <section class="feartures container">
+    <div class="feartures__content">
+      <!-- <div class="features__item fearture">
+        <div class="fearture__top">
+          <img class="fearture__img" src="" alt="">
+        </div>
+        <div class="fearture__bot">
+          <h3 class="fearture__header"></h3>
+          <div class="fearture__description"></div>
+        </div>
+      </div> -->
+    </div>
+  </section>
+  <section class="fast-shipping products container">
+  </section>
+  <section class="new products container">
+  </section>
+  <section class="birthday products container">
+  </section>
+  <section class="opening products container">
+  </section>
+  <section class="sad products container">
+  </section>
+  <section class="fruits products container">
+  </section>
+  <section class="partner container">
+    <h3 class="partner__header">KHÁCH HÀNG TIÊU BIỂU</h3>
+    <div class="partner__content swiper">
+      <div class="partner__wrapper swiper-wrapper">
+        <div class="partner__slide swiper-slide">
+          <img class="partner__image swiper-image" src="./img/partners/1.png" alt="Partner image 1"></img>
+        </div>
+        <div class="partner__slide swiper-slide">
+          <img class="partner__image swiper-image" src="./img/partners/2.png" alt="Partner image 2"></img>
+        </div>
+        <div class="partner__slide swiper-slide">
+          <img class="partner__image swiper-image" src="./img/partners/3.png" alt="Partner image 3"></img>
+        </div>
+        <div class="partner__slide swiper-slide">
+          <img class="partner__image swiper-image" src="./img/partners/4.png" alt="Partner image 4"></img>
+        </div>
+        <div class="partner__slide swiper-slide">
+          <img class="partner__image swiper-image" src="./img/partners/5.png" alt="Partner image 5"></img>
+        </div>
+        <div class="partner__slide swiper-slide">
+          <img class="partner__image swiper-image" src="./img/partners/6.png" alt="Partner image 6"></img>
+        </div>
+        <div class="partner__slide swiper-slide">
+          <img class="partner__image swiper-image" src="./img/partners/7.png" alt="Partner image 7"></img>
+        </div>
+        <div class="partner__slide swiper-slide">
+          <img class="partner__image swiper-image" src="./img/partners/8.png" alt="Partner image 8"></img>
+        </div>
+        <div class="partner__slide swiper-slide">
+          <img class="partner__image swiper-image" src="./img/partners/9.png" alt="Partner image 9"></img>
+        </div>
+        <div class="partner__slide swiper-slide">
+          <img class="partner__image swiper-image" src="./img/partners/10.png" alt="Partner image 10"></img>
+        </div>
+        <div class="partner__slide swiper-slide">
+          <img class="partner__image swiper-image" src="./img/partners/11.png" alt="Partner image 11"></img>
+        </div>
+        <div class="partner__slide swiper-slide">
+          <img class="partner__image swiper-image" src="./img/partners/12.png" alt="Partner image 12"></img>
+        </div>
+        <div class="partner__slide swiper-slide">
+          <img class="partner__image swiper-image" src="./img/partners/13.png" alt="Partner image 13"></img>
+        </div>
+        <div class="partner__slide swiper-slide">
+          <img class="partner__image swiper-image" src="./img/partners/14.png" alt="Partner image 14"></img>
+        </div>
+        <div class="partner__slide swiper-slide">
+          <img class="partner__image swiper-image" src="./img/partners/15.png" alt="Partner image 15"></img>
+        </div>
+        <div class="partner__slide swiper-slide">
+          <img class="partner__image swiper-image" src="./img/partners/16.png" alt="Partner image 16"></img>
+        </div>
+        <div class="partner__slide swiper-slide">
+          <img class="partner__image swiper-image" src="./img/partners/17.png" alt="Partner image 17"></img>
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- SWIPER JS -->
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script>
-    var swiper = new Swiper(".mySwiper", {
+    const swiper1 = new Swiper(".slider__content", {
       loop: true,
       navigation: {
         nextEl: ".swiper-button-next",
@@ -148,6 +266,28 @@
         delay: 3000,
       },
     });
+    const swiper2 = new Swiper(".partner__content", {
+    slidesPerView: 2,
+    slidesPerGroup: 2,
+    loop: true,
+    autoplay: {
+      delay: 3000,
+    },
+    breakpoints: {
+          576: {
+            slidesPerView: 3,
+            slidesPerGroup: 3,
+          },
+          768: {
+            slidesPerView: 4,
+            slidesPerGroup: 4,
+          },
+          1200: {
+            slidesPerView: 5,
+            slidesPerGroup: 5,
+          },
+        },
+  });
   </script>
 </body>
 

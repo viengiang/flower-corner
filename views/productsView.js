@@ -2,7 +2,7 @@ import { MAX_RATE_STARS } from '../config.js';
 import View from './View.js';
 
 class ProductsView extends View {
-  _parentEl = document.querySelector('.sales');
+  _parentEl;
 
   _formatPrice(price) {
     return `${new Intl.NumberFormat('vi-VN').format(price)}VND`;
@@ -11,7 +11,7 @@ class ProductsView extends View {
   _generatePrice(item) {
     return item.isSale
       ? `
-      <span class="product__normal-price isSale">${this._formatPrice(
+      <span class="product__normal-price onsale">${this._formatPrice(
         item.price
       )}</span>
       <span class="product__sale-price">${this._formatPrice(
@@ -20,7 +20,8 @@ class ProductsView extends View {
         `
       : `<span class="product__normal-price">${this._formatPrice(
           item.price
-        )}</span>`;
+        )}</span>
+        `;
   }
 
   _generateSaleIcon(item) {
@@ -44,14 +45,14 @@ class ProductsView extends View {
       .map(
         item => `
     <div class="products__item product">
-      <a class="product__top">
+      <a class="product__top" href="/">
         <div class="product__img">
           <img src="${item.img}" alt="${item.name}">
         </div>
         ${this._generateSaleIcon(item)}
       </a>
       <div class="product__bot">
-        <div class="product__name">${item.name}</div>
+        <a class="product__name" href="/">${item.name}</a>
         <div class="product__rate rate">
           ${this._generateRateStar(item.rate)}
         </div>
@@ -75,6 +76,12 @@ class ProductsView extends View {
         ${this._generateProduct()}
       </div>
     `;
+  }
+
+  render(data) {
+    this._data = data;
+    this._parentEl = document.querySelector(this._data.className);
+    this._parentEl.insertAdjacentHTML('afterbegin', this._generateMarkup());
   }
 }
 
