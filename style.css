@@ -977,6 +977,10 @@ footer.container {
   padding: 0 20px;
 }
 
+.footer__content {
+  margin-bottom: 70px;
+}
+
 .footer__top,
 .footer__bot {
   border-top: 1px solid var(--color-light--4);
@@ -993,7 +997,6 @@ footer.container {
 
 .contact-bot.download {
   margin-top: 5px;
-  padding: 0 15px;
 }
 
 .download__appstore,
@@ -1033,9 +1036,10 @@ footer .menu li {
   padding: 2px 0;
 }
 
-.follow__menu.menu {
-  text-transform: unset;
+.follow__menu.menu li {
+  text-transform: none;
   font-size: 14px;
+  margin-bottom: 10px;
 }
 
 .address .address__branch {
@@ -1052,12 +1056,17 @@ footer .menu li {
   margin: 5px 0;
 }
 
+.download__header,
+.download__appstore {
+  margin-bottom: 10px;
+}
+
 @media screen and (min-width: 576px) {
   .contact .contact__logo {
     width: 400px;
   }
 
-  .contact__qr {
+  .download__qr {
     width: 300px;
   }
 
@@ -1069,4 +1078,108 @@ footer .menu li {
     display: block;
     width: 420px;
   }
+}
+
+@media screen and (min-width: 768px) {
+  .footer__top {
+    display: flex;
+    gap: 50px;
+  }
+
+  .contact,
+  .customer,
+  .follow,
+  .address {
+    width: 25%;
+  }
+
+  .contact .contact__logo {
+    width: 90%;
+  }
+
+  .contact .download__qr {
+    width: 100%;
+  }
+
+  .contact .download__app {
+    padding: 0 10px;
+  }
+
+  .download__header {
+    font-size: 14px;
+  }
+
+  .download__appstore,
+  .download__gplay {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .contact-bot {
+    display: flex;
+  }
+
+  .contact .download__qr {
+    width: 65%;
+  }
+
+  .footer__bot {
+    position: relative;
+  }
+
+  .footer__bot .bct {
+    position: absolute;
+    top: 20px;
+    right: 0;
+    width: 120px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  footer.container {
+    padding: 0;
+  }
+}
+
+/* CONTACT FIXED */
+
+.contact-fixed {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 20;
+  background-color: var(--color-brand--1);
+}
+
+.contact-fixed__content {
+  display: flex;
+  justify-content: center;
+  margin: 8px 0;
+  flex-basis: 0;
+  flex-grow: 1;
+  color: var(--color-light--1);
+  font-size: 13px;
+  line-height: 1.2;
+  min-height: 40px;
+}
+
+.contact-fixed .contact-fixed__action {
+  text-align: center;
+  padding: 0 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  border-left: 1px solid var(--color-light--1);
+}
+
+.contact-fixed .contact-fixed__action:first-child {
+  border-left: none;
+}
+
+.contact-fixed .contact-fixed__action span {
+  max-height: 32px;
+  overflow: hidden;
 }
